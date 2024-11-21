@@ -1,0 +1,2 @@
+export const STAFF_SERVICE = 'STAFF_SERVICE';
+export const PAYROLL_SERVICE = 'PAYROLL_SERVICE';
