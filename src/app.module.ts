@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { config } from './core/config';
 import { validationSchema } from './core/config/schemas/config.schema';
+import { CrossModule } from './modules/OMR-Example/omr.module';
 
 
 @Module({
@@ -12,9 +13,7 @@ import { validationSchema } from './core/config/schemas/config.schema';
       envFilePath: '.env',
       load: [config],
     }),
-    // ServeStaticModule.forRoot({
-    //   rootPath: join(__dirname, '..', 'public'),
-    // }),
+    CrossModule
   ]
 })
 export class AppModule {}
